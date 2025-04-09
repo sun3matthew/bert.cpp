@@ -183,6 +183,9 @@ BERT_API void bert_encode_batch_c(
     int32_t n_threads
 );
 
+#ifdef __cplusplus
+}
+#endif
 BERT_API bert_tokens bert_tokenize(
     struct bert_ctx * ctx,
     bert_string text,
@@ -195,6 +198,9 @@ BERT_API bert_string bert_detokenize(
     bool debug
 );
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 BERT_API uint64_t bert_tokenize_c(
     struct bert_ctx * ctx,
     const char * text,
